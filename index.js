@@ -38,7 +38,6 @@ let stocks = [
     growth: 2.9,
     industry: "finance",
     exchange: "bse",
-    price: 1900,
   },
   {
     id: 5,
