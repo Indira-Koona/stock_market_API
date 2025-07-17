@@ -1,7 +1,22 @@
-# Simple express demo
 
-> Express: fast, unopinionated, minimalist web framework for Node.js
+# 📈 Stock Market API
 
-This project shows a simple express server serving a single HTML page and using `express.static` to serve static files.
+This project is a stock market API built using Node.js and Express. It allows filtering and sorting of stock data using query parameters.
 
-Check out the [express documentation](https://expressjs.com/) for more information.
+## 🚀 Features
+- Filter stocks by brand, price range, and more
+- Sort by price, rating, etc.
+- JSON API for frontend integration
+
+## 🛠 Tech Stack
+- Node.js
+- Express.js
+- CORS
+
+## 🔧 Installation
+
+```bash
+git clone https://github.com/Indira-Koona/stock_market_API.git
+cd stock_market_API
+npm install
+node index.js
