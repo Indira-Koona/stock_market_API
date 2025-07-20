@@ -215,6 +215,24 @@ app.get('/stocks/filter/industry',(req,res)=>{
 app.get('/stocks',(req,res)=>{
   res.json(stocks);
 })
+app.get('/stocks/filter', (req, res) => {
+  let filters = req.query; // filters from URL like ?industry=pharma&exchange=bse
+
+  let result = stocks.filter((stock) => {
+    // Check if every filter field matches the stock field
+    return Object.keys(filters).every((key) => {
+      if (typeof stock[key] === 'string') {
+        return stock[key].toLowerCase() === filters[key].toLowerCase();
+      }
+      // Convert both to number for comparison if not string
+      return Number(stock[key]) === Number(filters[key]);
+    });
+  });
+
+  res.json(result);
+});
+
+
 
 
 app.listen(port, () => {
